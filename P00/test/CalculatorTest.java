@@ -25,6 +25,10 @@ public class CalculatorTest {
 	}
 
 	@Test
+	public void test() {
+		// fail("Not yet implemented");
+	}
+	@Test
 	public void testAdd() {
 		// fail("Not yet implemented");
 
@@ -46,7 +50,6 @@ public class CalculatorTest {
 		assertEquals(actual, expected);
 		
 	}
-	
 	@Test
 	public void testMultiply() {
 	  int a = 123;
@@ -67,17 +70,27 @@ public class CalculatorTest {
 	  assertEquals(expected, actual);
 	}
 	
-	@Test
-	public void testDivideByZero() {
-	  int a = 1000;
-	  int b = 0;
-	  Calculator cal = new Calculator();
-	  assertThrows(ArithmeticException.class, () -> {
-	    cal.divide(a, b);
-	  });
-	}
+	public int divide(int a, int b) {
+		  // Check if the denominator is 0
+		  if (b == 0) {
+		    // Throw an ArithmeticException with a message
+		    throw new ArithmeticException("Cannot divide by zero");
+		  }
+		  // Otherwise, perform the division as usual
+		  return a / b;
+		}
 
-	
-	
+		@Test
+		public void testDivideByZero() {
+		  int a = 1000;
+		  int b = 0;
+		  Calculator cal = new Calculator();
+		  // Use assertThrows to check if the method throws an exception
+		  assertThrows(ArithmeticException.class, () -> {
+		    // Call the method with the invalid input
+		    cal.divide(a, b);
+		  });
+		}
+
 
 }
