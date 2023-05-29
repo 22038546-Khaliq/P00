@@ -75,9 +75,8 @@ public class CalculatorTest {
 		  int a = 1000;
 		  int b = 0;
 		  Calculator cal = new Calculator();
-		  // Use assertThrows to check if the method throws an exception
 		  assertThrows(ArithmeticException.class, () -> {
-		    // Call the method with the invalid input
+		 
 		    cal.divide(a, b);
 		  });
 		}

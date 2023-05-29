@@ -23,12 +23,9 @@ public class Calculator {
 	
 	
 	public int testdivide(int a, int b) {
-		  // Check if the denominator is 0
 		  if (b == 0) {
-		    // Throw an ArithmeticException with a message
 		    throw new ArithmeticException("Cannot divide by zero");
 		  }
-		  // Otherwise, perform the division as usual
 		  return a / b;
 		}
 	
