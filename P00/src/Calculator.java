@@ -30,5 +30,12 @@ public class Calculator {
 		}
 	
 	
+	  public double exponential(double base, double exponent) {
+	    
+	    return Math.pow(base, exponent);
+	    
+	  }
+	
+	
 
 }

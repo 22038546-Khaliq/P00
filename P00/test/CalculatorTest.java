@@ -80,6 +80,18 @@ public class CalculatorTest {
 		    cal.divide(a, b);
 		  });
 		}
+		
+		public void testExponential() {
+			  int base = 2; 
+			  Calculator cal = new Calculator();
+			 
+			  for (int exponent = 1; exponent <= 5; exponent++) {
+			    double expected = Math.pow(base, exponent);
+			    assertEquals(expected, cal.exponential(base, exponent), 0.001);
+			  }
+			}
+
+
 
 
 }
